@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate OTP</title>
+</head>
+<body>
+	<h1>Generate OTP</h1>
+<script>
+	function generateOTP(length) {
+		const chars = "0123456789";
+		let OTP = "";
+		for (let i = 0; i < length; i++) {
+			OTP += chars.charAt(Math.floor(Math.random() * chars.length));
+		}
+		return OTP;
+	}
+
+	const OTP = generateOTP(6);
+	alert("Your OTP is: " + OTP);
+</script>
+</body>
+</html>

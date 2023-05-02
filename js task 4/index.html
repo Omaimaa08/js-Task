@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Convert String to Capital Case</title>
+</head>
+<body>
+	<h1>Convert String to Capital Case</h1>
+
+	<script>
+		function toCapitalCase(str) {
+			return str.replace(/\b\w/g, function(txt) {
+				return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+			});
+		}
+
+		const inputStr = prompt("Enter a string:");
+		const outputStr = toCapitalCase(inputStr);
+		document.write(`Input string: ${inputStr}<br>Output string: ${outputStr}`);
+	</script>
+</body>
+</html>

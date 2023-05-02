@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leap Year Checker</title>
+</head>
+<body>
+	<h1>Leap Year Checker</h1>
+
+	<script>
+		const currentYear = new Date().getFullYear();
+
+		function isLeapYear(year) {
+			return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+		}
+
+		if (isLeapYear(currentYear)) {
+			window.alert(currentYear + " is a leap year.");
+		} else {
+			window.alert(currentYear + " is not a leap year.");
+		}
+	</script>
+</body>
+</html>

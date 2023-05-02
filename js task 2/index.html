@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leap Years in Next 10 Years</title>
+</head>
+<body>
+	<h1>Leap Years in Next 10 Years</h1>
+<script>
+	const currentYear = new Date().getFullYear();
+
+	function isLeapYear(year) {
+		return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+	}
+
+	function getNext10LeapYears() {
+		const leapYears = [];
+		let year = currentYear + 1;
+		while (leapYears.length < 10) {
+			if (isLeapYear(year)) {
+				leapYears.push(year);
+			}
+			year++;
+		}
+		return leapYears;
+	}
+
+	const next10LeapYears = getNext10LeapYears();
+	alert("The leap years in the next 10 years are: " + next10LeapYears.join(", "));
+</script>
+</body>
+</html>
